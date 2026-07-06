@@ -39,3 +39,23 @@ les passages de mauvaise qualité audio, ou à afficher un sous-titrage synchron
 
 version de Scribe.
 
+
+
+\## Q4 — Choix de la température
+
+Température fixée à 0.2 pour le résumé : on veut un compte rendu fidèle et factuel, pas créatif.
+
+Une température basse réduit la variabilité et le risque d'invention (hallucination) de contenu
+
+absent de la transcription.
+
+
+
+\## Q5 — Prompt système et tokens en cache
+
+Le prompt système est identique à chaque appel (il ne change pas d'un audio à l'autre). Groq peut
+
+mettre en cache ce préfixe commun (prompt caching), ce qui réduit la latence et le coût des appels
+
+répétés puisque seul le contenu utilisateur (la transcription) change à chaque requête.
+
