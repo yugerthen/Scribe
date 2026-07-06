@@ -11,7 +11,13 @@ Scribe est un outil en ligne de commande qui transforme un enregistrement audio
 
 ## Installation
 
-(à compléter à l'étape 2)
+\## Installation
+
+1\. Cloner le dépôt : git clone https://github.com/yugerthen/Scribe.git
+
+2\. Installer les dépendances : pip install -r requirements.txt
+
+3\. Copier .env.example en .env et renseigner votre clé API Groq (console.groq.com)
 
 ## Usage
 
@@ -23,9 +29,7 @@ python src/main.py audio\_samples/test.wav
 
 Le compte rendu s'affiche dans le terminal et est sauvegardé dans un fichier
 
-compte\_rendu\_AAAAMMJJ\_HHMMSS.md à la racine du projet.
-
-
+`compte\_rendu\_AAAAMMJJ\_HHMMSS.md` à la racine du projet.
 
 \## Q3 — Métadonnées de transcription
 
