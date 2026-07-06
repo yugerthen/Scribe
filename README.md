@@ -29,9 +29,7 @@ python src/main.py audio\_samples/test.wav
 
 Le compte rendu s'affiche dans le terminal et est sauvegardé dans un fichier
 
-compte\_rendu\_AAAAMMJJ\_HHMMSS.md à la racine du projet.
-
-
+`compte\_rendu\_AAAAMMJJ\_HHMMSS.md` à la racine du projet.
 
 \## Q3 — Métadonnées de transcription
 
