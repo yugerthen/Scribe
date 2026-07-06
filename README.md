@@ -25,3 +25,17 @@ Scribe est un outil en ligne de commande qui transforme un enregistrement audio
 
 \- LLM : llama-3.3-70b-versatile — meilleure qualité de synthèse/structuration qu'un modèle plus léger, important pour un compte rendu fidèle.
 
+
+
+\## Q3 — Métadonnées de transcription
+
+En plus du texte, l'API Groq renvoie (avec response\_format="verbose\_json") : la langue détectée,
+
+la durée totale, et des segments horodatés contenant des indicateurs de qualité (avg\_logprob,
+
+compression\_ratio, no\_speech\_prob). Ces métadonnées pourraient servir à détecter automatiquement
+
+les passages de mauvaise qualité audio, ou à afficher un sous-titrage synchronisé dans une future
+
+version de Scribe.
+
