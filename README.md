@@ -1,25 +1,32 @@
-# Scribe
+\# Scribe
+
+
 
 Scribe est un outil en ligne de commande qui transforme un enregistrement audio
+
 (réunion, cours, note vocale) en compte rendu écrit et structuré.
 
-## Fonctionnement
 
-1. L'utilisateur fournit un fichier audio.
-2. Un modèle Speech-to-Text (Groq) transcrit l'audio en texte brut.
-3. Un LLM (Groq) reformule ce texte en compte rendu structuré : titre, points clés, décisions, actions.
 
-## Installation
+\## Fonctionnement
+
+1\. L'utilisateur fournit un fichier audio.
+
+2\. Un modèle Speech-to-Text (Groq) transcrit l'audio en texte brut.
+
+3\. Un LLM (Groq) reformule ce texte en compte rendu structuré : titre, points clés, décisions, actions.
+
+
 
 \## Installation
 
-1\. Cloner le dépôt : git clone https://github.com/yugerthen/Scribe.git
+1\. Cloner le dépôt : `git clone https://github.com/yugerthen/Scribe.git`
 
-2\. Installer les dépendances : pip install -r requirements.txt
+2\. Installer les dépendances : `pip install -r requirements.txt`
 
-3\. Copier .env.example en .env et renseigner votre clé API Groq (console.groq.com)
+3\. Copier `.env.example` en `.env` et renseigner votre clé API Groq (console.groq.com)
 
-## Usage
+
 
 \## Usage
 
@@ -29,7 +36,21 @@ python src/main.py audio\_samples/test.wav
 
 Le compte rendu s'affiche dans le terminal et est sauvegardé dans un fichier
 
-compte\_rendu\_AAAAMMJJ\_HHMMSS.md à la racine du projet.
+`compte\_rendu\_AAAAMMJJ\_HHMMSS.md` à la racine du projet.
+
+
+
+\## Choix des modèles
+
+\- STT : whisper-large-v3-turbo — rapide et économique, largement suffisant pour transcrire des réunions/cours.
+
+\- LLM : llama-3.3-70b-versatile — meilleure qualité de synthèse/structuration qu'un modèle plus léger, important pour un compte rendu fidèle.
+
+
+
+\## Q1 — Pourquoi le .gitignore doit exister avant tout code manipulant des secrets
+
+Un fichier commité une seule fois reste dans l'historique Git pour toujours, même si on le supprime après. Le seul moyen fiable de ne jamais exposer une clé API est de l'exclure avant qu'elle soit ajoutée au dépôt.
 
 
 
