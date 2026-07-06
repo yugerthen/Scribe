@@ -15,15 +15,15 @@ Scribe est un outil en ligne de commande qui transforme un enregistrement audio
 
 ## Usage
 
-(à compléter à l'étape 5)
+\## Usage
+
+python src/main.py audio\_samples/test.wav
 
 
 
-\## Choix des modèles
+Le compte rendu s'affiche dans le terminal et est sauvegardé dans un fichier
 
-\- STT : whisper-large-v3-turbo — rapide et économique, largement suffisant pour transcrire des réunions/cours.
-
-\- LLM : llama-3.3-70b-versatile — meilleure qualité de synthèse/structuration qu'un modèle plus léger, important pour un compte rendu fidèle.
+compte\_rendu\_AAAAMMJJ\_HHMMSS.md à la racine du projet.
 
 
 
